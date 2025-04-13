@@ -1,0 +1,19 @@
+/* Ensure that for any pin marked with 'force-hover', the hover-only child elements remain visible */
+.force-hover a[data-test-id="visit-button"],
+.force-hover div[data-test-id="saved-info"] {
+  visibility: visible !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Additional CSS overrides as a fallback */
+a[data-test-id="visit-button"] {
+  visibility: visible !important;
+  display: block !important;
+  pointer-events: auto !important;
+}
+div[data-test-id="saved-info"] {
+  visibility: visible !important;
+  display: block !important;
+  opacity: 1 !important;
+}

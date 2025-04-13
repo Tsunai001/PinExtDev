@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Pinterest Content Filter",
+  "version": "1.0",
+  "description": "Removes external-link and sponsored pins, and forces saved-info visibility on Pinterest.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.pinterest.com/*",
+    "https://au.pinterest.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.pinterest.com/*",
+        "https://au.pinterest.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
